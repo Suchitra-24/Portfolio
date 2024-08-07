@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  nav {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+  }
+  
+  nav a:hover {
+    background-color: #2980b9;
+  }
+  
+  header {
+    background-color: #3498db;
+    text-align: center;
+    padding: 50px 0;
+    color: white;
+  }
+  
+  #about {
+    background-color: #ecf0f1;
+    padding: 30px 20px;
+    border-radius: 10px;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-image {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .about-text {
+    max-width: 60%;
+    text-align: justify;
+  }
+  
+  section {
+    padding: 30px 20px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    color: #3498db;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .education-record,
+  .experience-record {
+    margin-bottom: 20px;
+  }
+  
+  .skill {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .project {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+  
+  .project a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  footer {
+    background-color: #3498db;
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .curved-box {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #ecf0f1;
+    margin-bottom: 20px;
+  }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+  
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+  });
+    </script>
+    <title>Web Design Mastery | Responsive Portfolio</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Suchitra</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span>Suchitra<br />a</span> Web Developer
+          </h1>
+          <p class="description">
+            Welcome to my  portfolio! I'm Suchitra, a skilled and
+            creative web developer with a passion for creating beautiful,
+            responsive, and user-friendly websites. I've created a variety of
+            web projects.
+          </p>
+          <div class="action__btns">
+            <button class="portfolio">Portfolio</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="suchitra.jpg" alt="profile" />
+        </div>
+      </div>
+      <!-- About Section -->
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am computer science student currently pursuing Btech third year in the stream of computer science adn engineering with artificial intelligence and machine learning as my specialization at Rise Krishna Sai Praksam Group Of Institutions.I am passionate to get employed in the field of web development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2>My Education</h2>
+        <div class="education-record">
+            <div class="curved-box">
+                <h3>Rise Krishna Sai Prakasam Group Of Institutions </h3>
+                <p>Bachelor of Technology (B.Tech.) in Computer Science Engineering with AI&ML specialization</p>
+                <p>Year: 2021 - 2025</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <div class="experience-record">
+            <div class="curved-box">
+                <h3>CodSoft</h3>
+                <p>Web Developer Intern</p>
+                <p>December 2023 - January 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skill">C</div>
+        <div class="skill">Python</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Personal Projects</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>Basic Hospital Project</h3>
+                <p>Developed a new code  of responsive website for the hospital using various technologies. </p>
+                <a href="  https://suchitra-24.github.io/218A1A4206-Web-Project-3-Enhancements-Hospital-/" target="_blank">Project Link</a>
+            </div>
+            <div class="project">
+                <h3>A Travel Website</h3>
+                <p>Developed a new code  of responsive website for the hospital using various technologies. </p>
+                <a href="  https://suchitra-24.github.io/218A1A4206Project-4/" target="_blank">Project Link</a>
+            </div>
+            <div class="project">
+                <h3>Enhancement website</h3>
+                <p>Used web technologies like HTML,CSS,javascript to develop a travel website.
+                 I was responsible for developing the entire project.. </p>
+                <a href="https://suchitra-24.github.io/project5/" target="_blank">Project Link</a>
+                </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <p>Click Here to see My<a href="ch.suchitra(Resume).pdf" target="_blank">resume</a>.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email:suchitracherukuri@gmail.com</p>
+        <p><a href="https://www.linkedin.com/in/cherukuri-suchitra-652956288/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/" target="_blank">GitHub</a></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Suchitra. All rights reserved.</p>
+    </footer>
+
+    </section>
+  </body>
+</html>
